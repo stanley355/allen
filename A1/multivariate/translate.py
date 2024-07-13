@@ -4,9 +4,9 @@ from statsmodels.multivariate.manova import MANOVA
 # Sample data
 data = {
     'promotion': [0, 0, 0, 0, 0, 1, 1, 1, 1, 1],
-    'total_users': [1000, 1200, 1100, 1300, 1050, 1250],
-    'event_count': [5000, 6000, 5500, 6500, 5250, 6250],
-    'event_count_per_user': [5, 5, 5, 5, 5, 5]
+    'event_count': [3,	3,	15,	1,	9, 12,	26,	19,	22,	5],
+    'total_users': [1	,1,	3,	1	,2, 3	,6,	6,	3,	2],
+    'event_count_per_user': [3,	1,	5,	1,	4.5, 4,	4.3,	3.17,	7.3,	2.5]
 }
 
 df = pd.DataFrame(data)
