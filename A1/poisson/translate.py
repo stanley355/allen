@@ -4,16 +4,16 @@ import statsmodels.api as sm
 
 # Define the data
 pre_experiment = {
-    'login': [3, 1, 3, 5, 6],
-    'translate': [3, 3, 15, 1, 9],
-    'checkbot': [15, 58, 2, 4, 13],
+    'event_count': [3,	3,	15,	1,	9],
+    'total_users': [1	,1,	3,	1	,2],
+    'event_count_per_user': [3,	1,	5,	1,	4.5],
     'experiment': ['pre'] * 5
 }
 
 post_experiment = {
-    'login': [7, 8, 6, 5, 0],
-    'translate': [12, 26, 19, 22, 0],
-    'checkbot': [7, 26, 1, 16, 0],
+    'event_count': [12,	26,	19,	22,	5],
+    'total_users': [3	,6,	6,	3,	2],
+    'event_count_per_user': [4,	4.3,	3.17,	7.3,	2.5],
     'experiment': ['post'] * 5
 }
 
@@ -28,7 +28,7 @@ data = pd.concat([pre_df, post_df], ignore_index=True)
 data['experiment'] = data['experiment'].map({'pre': 0, 'post': 1})
 
 # Variables to model
-responses = ['login', 'translate', 'checkbot']
+responses = ['event_count', 'total_users', 'event_count_per_user']
 
 # Function to fit Poisson regression and print summary
 def fit_poisson_model(response):

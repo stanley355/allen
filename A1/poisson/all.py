@@ -4,17 +4,17 @@ import statsmodels.api as sm
 
 # Define the data
 pre_experiment = {
-    'event_count': [3, 1, 3, 5, 6],
-    'total_users': [2,	1,	3,	2,	5],
-    'event_count_per_user': [1.5,	1,	1,	2.5,	1.2],
-    'experiment': ['pre'] * 5
+    'event_count': [3, 1, 3, 5, 6, 3,	3,	15,	1,	9, 3,	1,	5,	1,	4.5],
+    'total_users': [2,	1,	3,	2,	5, 1	,1,	3,	1	,2, 2	,1,	1,	1,	3],
+    'event_count_per_user': [1.5,	1,	1,	2.5,	1.2, 3,	1,	5,	1,	4.5, 7.5,	11,	1,	4,	4.3],
+    'experiment': ['pre'] * 15
 }
 
 post_experiment = {
-    'event_count': [7, 8, 6, 5, 2],
-    'total_users': [5,	5,	6,	3,	2],
-    'event_count_per_user': [1.4,	1.6,	1,	1.67,	1],
-    'experiment': ['post'] * 5
+    'event_count': [7, 8, 6, 5, 2, 12,	26,	19,	22,	5, 7,	26,	1,	16,	15],
+    'total_users': [5,	5,	6,	3,	2, 3	,6,	6,	3,	2, 3,	2,	1,	2,	1],
+    'event_count_per_user': [1.5,	1,	1,	2.5,	1.2, 4,	4.3,	3.17,	7.3,	2.5, 2.3,	13,	1,	8	,15],
+    'experiment': ['post'] * 15
 }
 
 # Convert the dictionaries to dataframes
