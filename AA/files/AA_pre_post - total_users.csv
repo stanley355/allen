@@ -1,0 +1,5 @@
+total_users,mon,tue,wed,thurs,fri
+pre_translate,1,1,3,1,2
+pre_checkbot,2,1,1,1,3
+post_translate,3,6,6,3,2
+post_checkbot,3,2,1,2,1
