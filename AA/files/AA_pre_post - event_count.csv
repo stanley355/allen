@@ -1,5 +1,6 @@
-event_count,mon,tue,wed,thurs,fri
-pre_translate,3,3,15,1,9
-pre_checkbot,15,11,2,4,13
-post_translate,12,26,19,22,5
-post_checkbot,7,26,1,16,15
+event_count,pre_translate,pre_checkbot,post_translate,post_checkbot
+mon,3,15,12,7
+tue,3,11,26,26
+wed,15,2,19,1
+thurs,1,4,22,16
+fri,9,13,5,15
