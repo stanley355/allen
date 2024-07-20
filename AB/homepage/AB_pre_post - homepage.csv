@@ -1,0 +1,6 @@
+day,ec_pre_translate,ec_post_translate,tu_pre_translate,tu_post_translate,ecpe_pre_translate,ecpe_post_translate,ec_pre_checkbot,ec_post_checkbot,tu_pre_checkbot,tu_post_checkbot,ecpe_pre_checkbot,ecpe_post_checkbot
+mon,3,31,1,5,3,6.2,15,11,2,1,7.5,11
+tue,3,26,1,4,1,6.5,11,7,1,1,11,7
+wed,15,63,3,4,5,21,2,3,1,1,1,3
+thurs,1,91,1,9,1,10.11,4,40,1,6,4,6.67
+fri,9,32,2,4,4.5,8,13,1,3,1,4.3,1
