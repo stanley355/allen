@@ -1,7 +1,7 @@
 import pandas
 from statsmodels.multivariate.manova import MANOVA
 
-df = pandas.read_csv("AB/homepage/AB_pre_post - students.csv")
+df = pandas.read_csv("AB/students/AB_pre_post - students.csv")
 
 translate_data = {
     'experiment': [0, 0, 0, 0, 0, 1, 1, 1, 1, 1],
