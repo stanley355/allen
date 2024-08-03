@@ -1,17 +1,18 @@
 import pandas
 from scipy.stats import wilcoxon
 
-df = pandas.read_csv("AB/students/AB_pre_post - students.csv")
+df = pandas.read_csv("AB/texttospeech/AB_pre_post - Text to Speech.csv")
 
-translate_cols = df[['ec_pre_translate', 'ec_post_translate', 'tu_pre_translate', 'tu_post_translate', 'ecpe_pre_translate', 'ecpe_post_translate']]
-checkbot_cols = df[['ec_pre_checkbot', 'ec_post_checkbot', 'tu_pre_checkbot', 'tu_post_checkbot', 'ecpe_pre_checkbot', 'ecpe_post_checkbot']]
 
-print("Translate:")
-print("Event count", wilcoxon(translate_cols['ec_pre_translate'], translate_cols['ec_post_translate']))
-print("Total users", wilcoxon(translate_cols['tu_pre_translate'], translate_cols['tu_post_translate']))
-print("Event count per user", wilcoxon(translate_cols['ecpe_pre_translate'], translate_cols['ecpe_post_translate']))
+home_tts_cols = df[['ec_tts_home', 'ec_tts', 'tu_tts_home', 'tu_tts', 'ecpu_tts_home', 'ecpu_tts']]
+students_tts_cols = df[['ec_tts_students', 'ec_tts', 'tu_tts_students', 'tu_tts', 'ecpu_tts_students', 'ecpu_tts']]
+
+print("Home vs Tts:")
+print("Event count", wilcoxon(home_tts_cols['ec_tts_home'], home_tts_cols['ec_tts']))
+print("Total users", wilcoxon(home_tts_cols['tu_tts_home'], home_tts_cols['tu_tts']))
+print("Event count per user", wilcoxon(home_tts_cols['ecpu_tts_home'], home_tts_cols['ecpu_tts']))
 print("\n")
-print("Checkbot:")
-print("Event count", wilcoxon(checkbot_cols['ec_pre_checkbot'], checkbot_cols['ec_post_checkbot']))
-print("Total users", wilcoxon(checkbot_cols['tu_pre_checkbot'], checkbot_cols['tu_post_checkbot']))
-print("Event count per user", wilcoxon(checkbot_cols['ecpe_pre_checkbot'], checkbot_cols['ecpe_post_checkbot']))
+print("Students vs Tts:")
+print("Event count", wilcoxon(students_tts_cols['ec_tts_students'], students_tts_cols['ec_tts']))
+print("Total users", wilcoxon(students_tts_cols['tu_tts_students'], students_tts_cols['tu_tts']))
+print("Event count per user", wilcoxon(students_tts_cols['ecpu_tts_students'], students_tts_cols['ecpu_tts']))
